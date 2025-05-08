@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroBar - Безалкогольный бар</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Верхнее меню -->
+    <header class="header">
+        <div class="logo">
+            <h1>ZeroBar</h1>
+            <p>Безалкогольные коктейли премиум-класса</p>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#booking">Бронирование</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#events">Мероприятия</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Главный баннер -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Откройте мир вкусов без алкоголя</h2>
+            <p>Искусство миксологии в каждом глотке</p>
+            <a href="#catalog" class="btn">Посмотреть меню</a>
+        </div>
+    </section>
+<!-- Секция бронирования -->
+<!-- Секция бронирования -->
+<section id="booking" class="booking">
+    <h2 class="section-title">Забронировать стол</h2>
+    <div class="booking-container">
+        <div class="booking-map">
+            <div class="tables-map">
+                <!-- Схема расположения столов -->
+                <div class="table" data-table="1"></div>
+                <div class="table" data-table="2"></div>
+                <div class="table" data-table="3"></div>
+                <div class="table" data-table="4"></div>
+                <div class="table" data-table="5"></div>
+                <div class="table" data-table="6"></div>
+            </div>
+        </div>
+        <div class="booking-form">
+            <h3>Выберите стол №<span id="selected-table">-</span></h3>
+            <form id="reservation-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <input type="email" name="email" placeholder="Email">
+                <input type="date" name="date" required>
+                <input type="time" name="time" required>
+                <textarea name="notes" placeholder="Особые пожелания"></textarea>
+                <button type="submit" class="btn">Забронировать</button>
+            </form>
+            <div id="form-message" class="form-message"></div>
+        </div>
+    </div>
+</section>
+    <!-- Каталог напитков -->
+   <!-- Обновлённая секция каталога -->
+<section id="catalog" class="catalog">
+    <h2 class="section-title">Наша карта напитков</h2>
+    
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="mocktails">Моктейли</button>
+        <button class="filter-btn" data-filter="smoothies">Смузи</button>
+        <button class="filter-btn" data-filter="lemonades">Лимонады</button>
+        <button class="filter-btn" data-filter="teas">Чайные напитки</button>
+        <button class="filter-btn" data-filter="signature">Фирменные</button>
+    </div>
+    
+    <div class="drinks-container">
+        <!-- 1. Моктейли -->
+        <div class="drink-card" data-category="mocktails">
+            <div class="drink-img">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87" alt="Мохито">
+                <span class="drink-badge">Бестселлер</span>
+            </div>
+            <div class="drink-info">
+                <h3>Зеро Мохито</h3>
+                <p>Свежая мята, лайм, спрайт, тростниковый сахар</p>
+                <div class="drink-meta">
+                    <span class="price">290 ₽</span>
+                    <span class="volume">350 мл</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Новый моктейль -->
+        <div class="drink-card" data-category="mocktails">
+            <div class="drink-img">
+                <img src="https://images.unsplash.com/photo-1551751299-1b51cab2694c" alt="Клубничный коктейль">
+            </div>
+            <div class="drink-info">
+                <h3>Клубничный рассвет</h3>
+                <p>Клубника, базилик, сок лайма, газированная вода</p>
+                <div class="drink-meta">
+                    <span class="price">320 ₽</span>
+                    <span class="volume">400 мл</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Смузи -->
+        <div class="drink-card" data-category="smoothies">
+            <div class="drink-img">
+                <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71" alt="Тропический смузи">
+                <span class="drink-badge vegan">Vegan</span>
+            </div>
+            <div class="drink-info">
+                <h3>Тропик</h3>
+                <p>Манго, ананас, кокосовое молоко, мята</p>
+                <div class="drink-meta">
+                    <span class="price">350 ₽</span>
+                    <span class="volume">450 мл</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Фирменный коктейль -->
+        <div class="drink-card" data-category="signature">
+            <div class="drink-img">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b" alt="Фирменный коктейль">
+                <span class="drink-badge">Хит</span>
+            </div>
+            <div class="drink-info">
+                <h3>Zero Глеб</h3>
+                <p>Облепиха, имбирь, мёд, розмарин, тоник</p>
+                <div class="drink-meta">
+                    <span class="price">380 ₽</span>
+                    <span class="volume">300 мл</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Чайный напиток -->
+        <div class="drink-card" data-category="teas">
+            <div class="drink-img">
+                <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9" alt="Чайный напиток">
+            </div>
+            <div class="drink-info">
+                <h3>Восточный чай</h3>
+                <p>Чёрный чай, кардамон, корица, апельсин</p>
+                <div class="drink-meta">
+                    <span class="price">250 ₽</span>
+                    <span class="volume">500 мл</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Лимонад -->
+        <div class="drink-card" data-category="lemonades">
+            <div class="drink-img">
+                <img src="https://i.pinimg.com/550x/24/08/07/24080765998e0f0129c137d5c826814a.jpg" alt="Малиновый лимонад">
+                <span class="drink-badge">New</span>
+            </div>
+            <div class="drink-info">
+                <h3>Малиновый бриз</h3>
+                <p>Малина, лимон, мята, газированная вода</p>
+                <div class="drink-meta">
+                    <span class="price">280 ₽</span>
+                    <span class="volume">400 мл</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- О нас -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="section-title">О нашем баре</h2>
+            <p>ZeroBar - это уникальное пространство, где каждый может насладиться искусством миксологии без алкоголя. Наши бармены создают сложные вкусовые композиции, используя только натуральные ингредиенты: свежие фрукты, травы, специи и авторские сиропы.</p>
+            <p>Мы верим, что безалкогольные напитки могут быть такими же изысканными и сложными, как и их алкогольные аналоги. Наша миссия - изменить восприятие безалкогольных коктейлей и показать, что они заслуживают отдельного места в мире гастрономии.</p>
+        </div>
+        <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Интерьер бара">
+        </div>
+    </section>
+
+    <!-- Мероприятия -->
+    <section id="events" class="events">
+        <h2 class="section-title">Мероприятия</h2>
+        <div class="events-container">
+            <div class="event-card">
+                <div class="event-date">
+                    <span>15</span>
+                    <span>Июня</span>
+                </div>
+                <div class="event-info">
+                    <h3>Мастер-класс по моктейлям</h3>
+                    <p>Научитесь создавать безалкогольные коктейли у наших барменов</p>
+                    <a href="#" class="btn-small">Записаться</a>
+                </div>
+            </div>
+            
+            <div class="event-card">
+                <div class="event-date">
+                    <span>22</span>
+                    <span>Июня</span>
+                </div>
+                <div class="event-info">
+                    <h3>Дегустация новых напитков</h3>
+                    <p>Попробуйте наши новые авторские безалкогольные коктейли</p>
+                    <a href="#" class="btn-small">Записаться</a>
+                </div>
+            </div>
+            
+            <div class="event-card">
+                <div class="event-date">
+                    <span>30</span>
+                    <span>Июня</span>
+                </div>
+                <div class="event-info">
+                    <h3>Вечер живой музыки</h3>
+                    <p>Наслаждайтесь живыми выступлениями под наши фирменные напитки</p>
+                    <a href="#" class="btn-small">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="contacts">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contacts-container">
+            <div class="contact-info">
+                <h3>Адрес</h3>
+                <p>г. Москва, ул. Тверская, 18</p>
+                
+                <h3>Часы работы</h3>
+                <p>Пн-Чт: 12:00 - 23:00</p>
+                <p>Пт-Сб: 12:00 - 01:00</p>
+                <p>Вс: 12:00 - 22:00</p>
+                
+                <h3>Телефон</h3>
+                <p>+7 (495) 123-45-67</p>
+                
+                <h3>Email</h3>
+                <p>info@zerobar.ru</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3737891357376!2d37.60831031593095!3d55.75393098055313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311!2z0KLQstC10YDQtNC70Y_QvdC60LA!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>ZeroBar</h2>
+                <p>Безалкогольные коктейли премиум-класса</p>
+            </div>
+            <div class="footer-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#catalog">Меню</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#events">Мероприятия</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Подписка на новости</h3>
+                <form>
+                    <input type="email" placeholder="Ваш email">
+                    <button type="submit" class="btn-small">Подписаться</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ZeroBar. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
